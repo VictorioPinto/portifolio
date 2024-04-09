@@ -110,7 +110,7 @@ if (txtname && txtemail && txttelefone && txtmessagem && formu) {
 
         console.log(formu);
 
-        const r = await fetch("https://backend-nine-weld.vercel.app/sendEmail", {
+        const r = await fetch("https://backend-nine-weld.vercel.app", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
