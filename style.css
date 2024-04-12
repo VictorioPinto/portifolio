@@ -1,519 +1,819 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+.growing-bars {
+  display: flex;
+  justify-content: space-between;
+}
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+.growing-bar {
+  height: 50px;
+  width: 0;
+  transition: width 5s ease-out;
+}
 
-    <!--
-font-family: 'Cormorant', serif;
-font-family: 'Source Code Pro', monospace;
-font-family: 'Fira Code', monospace;
--->
-  </head>
+.growing-bar.visible {
+  width: 100%;
+}
 
-  <body>
-    <div id="divhdbutton">
-      <p id="hiddenbutton" onclick="myfuction()">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="1em"
-          viewBox="0 0 448 512"
-        >
-          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-          <path
-            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-          />
-        </svg>
-      </p>
-    </div>
-    <div id="divcima">
-      <ul id="cima">
-        <li class="alista"><a href="#nome">Home</a></li>
-        <li class="alista"><a href="#Sobremim"> Sobre Mim</a></li>
-        <li class="alista"><a href="#habilidades"> Habilidades</a></li>
-        <li class="alista"><a href="#educacao"> Educação</a></li>
-        <li class="alista"><a href="#backback"> Projetos</a></li>
-        <li class="alista"><a href="#contato"> Contato</a></li>
-        <li>
-          <label class="switch">
-            <input type="checkbox" id="chk" />
-            <span class="slidem round"></span>
-          </label>
-        </li>
-      </ul>
-    </div>
-    <div id="nome">
-      <h1>VICTÓRIO</h1>
-      <h2>DA SILVA</h2>
-      <p id="escreverauto">Programador Back-end e Front-end</p>
-    </div>
-    <div id="Sobremim">
-      <h1 class="titulo">Sobre Mim</h1>
-      <div id="detalhes">
-        <img
-          src="https://img.a.transfermarkt.technology/portrait/big/342229-1682683695.jpg?lm=1"
-          alt=""
-          width="250vh"
-          height="250vh"
-        />
-        <div class="Meunome">
-          <h3>
-            Meu nome é Victorio Pinto da Silva Neto sou estudante do cotemig,<br />
-            fiz o 1º ano e 2º ano , e estou fazendo o 3º ano no curso tecnico de
-            mobile na Ciência da Computação.
-          </h3>
-        </div>
-        <ul>
-          <li><span class="laranja"> > </span> Idade: 17 Anos</li>
-          <li>
-            <span class="laranja"> > </span> Localidade: Sagrada Familia BH
-          </li>
-          <li>
-            <span class="laranja"> > </span> Telefone: +55 (31) 99530-3107
-          </li>
-        </ul>
-        <ul>
-          <li><span class="laranja"> > </span> Grau: 3°ano</li>
-          <li><span class="laranja"> > </span> Educação atual: Cotemig</li>
-          <li>
-            <span class="laranja"> > </span> Email : Victoriopinto@gmail.com
-          </li>
-        </ul>
-        <div class="Meunome">
-          <h3>
-            Estou estudando programação desde os 14 anos de idade. Já tive
-            contato com programação desde os
-            <br />
-            meus 12 anos, pois meu irmão faz parte da área.
-          </h3>
-        </div>
-      </div>
-    </div>
-    <div id="habilidades">
-      <h1 class="titulo">Habilidades</h1>
-      <div>
-        <h2>
-          Aqui eu vou colocar minha evolução como progamador em <br />
-          diversas liguagens de programação com base na minha opnião
-        </h2>
-        <div id="flex">
-          <!--lista da direita-->
+body {
+  margin: 0;
+  background-image: url(img/css-backgrounds.png);
+  background-color: rgba(0, 0, 0, 0.3);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body.dark div {
+  background-color: black;
+  color: white;
+}
+#divcima {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 98;
 
-          <!-- Html - CSS -->
-          <div class="lista">
-            <div class="estilo">
-              <span id="tipos">HTML - CSS</span>
-              <span id="porcentagem">90%</span>
-            </div>
-            <div class="divsvg">
-              <div class="barrabranca">
-                <div class="growing-bar" id="barralaranjaHTML"></div>
-              </div>
+  top: 0;
+}
+body.white a {
+  color: black;
+}
+body.dark a {
+  color: white;
+}
+body.white div {
+  background-color: white;
+  color: black;
+}
+body.dark {
+  color: white;
+}
+body.white {
+  color: black;
+}
+#cima {
+  list-style: none;
+  font-size: 1rem;
+  display: flex;
+  color: rgb(255, 102, 0);
+  padding-inline-start: 0;
+  margin: 0;
+}
 
-              <img src="img/htmlecss.png" alt="" width="100vh" />
-            </div>
-            <!-- Java Script -->
-            <div class="estilo">
-              <span id="tipos">Java Script</span>
-              <span id="porcentagem">80%</span>
-            </div>
-            <div class="divsvg">
-              <div class="barrabranca">
-                <div class="growing-bar" id="barralaranjaJS"></div>
-              </div>
-              <img src="img/JS.png" alt="" width="70vh" />
-            </div>
-            <!-- PHP -->
-            <div class="estilo">
-              <span id="tipos">PHP</span>
-              <span id="porcentagem">20%</span>
-            </div>
-            <div class="divsvg">
-              <div class="barrabranca">
-                <div class="growing-bar" id="barralaranjaPHP"></div>
-              </div>
-              <img src="img/SQL.png" alt="" width="60vh" />
-            </div>
-            <!-- Python -->
-            <!-- <div class="estilo">
-              <span id="tipos">Python (Prentedo aprender)</span>
-              <span id="porcentagem">0%</span>
-            </div>
-            <div class="divsvg">
-              <div class="barrabranca">
-                <div class="growing-bar" id="barralaranjaPython"></div>
-              </div>
-              <img src="img/python.png" alt="" width="60vh" />
-            </div> -->
+a {
+  text-decoration: none;
+  transition: 0.4s ease-in-out;
+}
 
-            <!-- Swift -->
-            <div class="estilo">
-              <span id="tipos">Swift</span>
-              <span id="porcentagem">10%</span>
-            </div>
-            <div class="divsvg">
-              <div class="barrabranca">
-                <div class="growing-bar" id="barralaranjaSwift"></div>
-              </div>
-              <img src="img/Swift.png" alt="" width="60vh" />
-            </div>
-          </div>
+.alista {
+  margin: 2vh 3vh;
+  font-family: "Source Code Pro", monospace;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  z-index: 99;
+}
 
-          <!--lista da esquerda-->
-          <!-- SQL -->
-          <div class="lista">
-            <div class="estilo">
-              <span id="tipos">SQL</span>
-              <span id="porcentagem">40%</span>
-            </div>
-            <div class="divsvg">
-              <div class="barrabranca">
-                <div class="growing-bar" id="barralaranjaSQL"></div>
-              </div>
-              <img src="img/SQL.png" alt="" width="60vh" />
-            </div>
-            <!-- C# -->
-            <div class="estilo">
-              <span id="tipos">C#</span>
-              <span id="porcentagem">30%</span>
-            </div>
-            <div class="divsvg">
-              <div class="barrabranca">
-                <div class="growing-bar" id="barralaranjaCsharp"></div>
-              </div>
-              <img src="img/csharp.png" alt="" width="70vh" />
-            </div>
-            <!-- Unity Hub -->
-            <div class="estilo">
-              <span id="tipos">Unity Hub</span>
-              <span id="porcentagem">40%</span>
-            </div>
-            <div class="divsvg">
-              <div class="barrabranca">
-                <div class="growing-bar" id="barralaranjaUH"></div>
-              </div>
-              <img src="img/UH.png" alt="" width="60vh" />
-            </div>
+.alista:hover a {
+  color: rgb(255, 102, 0);
+}
 
-            <!-- Kotlin -->
-            <div class="estilo">
-              <span id="tipos">Kotlin</span>
-              <span id="porcentagem">10%</span>
-            </div>
-            <div class="divsvg">
-              <div class="barrabranca">
-                <div class="growing-bar" id="barralaranjaKotlin"></div>
-              </div>
-              <img src="img/Kotlin.png" alt="" width="60vh" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="educacao">
-      <h1 class="titulo">Educação</h1>
-      <div class="ahistoria">
-        <div class="listas2" id="esquerda">
-          <div class="Bola"></div>
-          <div class="historia">
-            <h2>
-              Cotemig (1°ano) <br />
-              (01/02/22)-(01/12/22)
-            </h2>
-            <p>
-              No primeiro ano aprendi bastante sobre a logica de programação
-              <br />
-              usando programas de apredizangem como VisualG , Appinventor <br />
-              e a como progamar e a usar o excel.
-            </p>
-          </div>
-          <div class="Bola"></div>
-          <div class="historia">
-            <h2>
-              Curso (HTML-CSS Java-Script typescript)
-              <br />(15/01/23)-(30/04/23)
-            </h2>
-            <p>
-              No inicio do ano de 2023 decidir começar a estudar mais a <br />
-              fundo sobre programação então eu entrei na conta do meu<br />
-              irmão na udemy e começei o curso de Java-script e Type-script.
-            </p>
-          </div>
-        </div>
-        <div class="listas2">
-          <div class="Bola"></div>
-          <div class="historia">
-            <h2>
-              Cotemig (2°ano) <br />
-              (01/02/23)-(01/12/23)
-            </h2>
-            <p>
-              No primeiro ano aprendi bastante sobre a logica de programação
-              <br />
-              usando programas de apredizangem como VisualG e Appinventor
-            </p>
-          </div>
-          <div class="Bola"></div>
-          <div class="historia">
-            <h2>
-              Curso (Python) <br />
-              (01/03/24)-(XX/XX/XX)
-            </h2>
-            <p>...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="backback">
-      <h1 class="titulo">Projetos</h1>
-      <div id="ad">
-        <div id="back">
-          <div
-            id="carouselExampleCaptions"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-indicators" id="sei">
-              <button
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <a href="/jogodavelha/index.html">
-                  <img
-                    src="img/jogodavelha.png"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                  <div class="carousel-caption d-none d-md-block" id="ga">
-                    <h5></h5>
-                    <p></p>
-                  </div>
-                </a>
-              </div>
-              <div class="carousel-item">
-                <a href="/apipokemon/index.html">
-                  <img
-                    src="img/apipokemon.png"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                  <div class="carousel-caption d-none d-md-block" id="ge">
-                    <h5></h5>
-                    <p></p>
-                  </div>
-                </a>
-              </div>
-              <div class="carousel-item">
-                <a href="/monkepo-copia-main/index.html">
-                  <img src="img/Monkepo.png" class="d-block w-100" alt="..." />
-                  <div class="carousel-caption d-none d-md-block" id="go">
-                    <h5></h5>
-                    <p></p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="contato">
-      <h1 class="titulo">Contato</h1>
-      <div id="duasdivs">
-        <div id="redessociais" class="abcd">
-          <ul>
-            <li>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 512 512"
-              >
-                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path
-                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
-                />
-              </svg>
-              <a> victoriopinto@gmail.com</a>
-            </li>
-            <li>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 496 512"
-              >
-                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path
-                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                />
-              </svg>
-              <a href="https://github.com/VictorioPinto"> github </a>
-            </li>
-            <li>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 448 512"
-              >
-                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path
-                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-                />
-              </svg>
-              <a
-                href="https://www.linkedin.com/in/vict%C3%B3rio-pinto-a3aaa62b2/"
-              >
-                likedin
-              </a>
-            </li>
-            <li>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 448 512"
-              >
-                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path
-                  d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
-                />
-              </svg>
-              <a href="https://wa.me/553195303107">+55 (31)99530-3107</a>
-            </li>
-          </ul>
-        </div>
+.alista:after {
+  height: 2px;
+  background: rgb(255, 102, 0);
+  content: " ";
+  transition: 0.5s;
+  width: 0;
+  position: absolute;
+  display: block;
+}
 
-        <div id="mano">
-          <form id="formu">
-            <div id="nomecompleto">
-              <div id="firstname">
-                <p>Nome</p>
-                <input
-                  type="text"
-                  id="txtfirstname"
-                  placeholder="Nome"
-                  required
-                  name="name"
-                  oninput="mascaranome()"
-                />
-              </div>
-            </div>
-            <div id="email">
-              <p>Seu email</p>
-              <input
-                type="email"
-                id="ema"
-                placeholder="...@gmail.com"
-                required
-                name="email"
-              />
-            </div>
-            <div id="Numero">
-              <p>Seu numero</p>
-              <input
-                type="text"
-                id="telefo"
-                placeholder="+99 (99) 99999-9999"
-                required
-                name="Telefone"
-                onkeyup="mascaratelefone()"
-              />
-            </div>
-            <div>
-              <p>Menssagem</p>
-              <textarea
-                name="Messagem"
-                id="Messagem"
-                cols="30"
-                rows="10"
-                required
-              ></textarea>
-            </div>
-            <div id="divbutton">
-              <button type="submit">Enviar</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+.alista:hover:after {
+  width: 105%;
+}
 
-    <footer>
-      <h2>Copyright ©2024 All rights reserved | Victório</h2>
-    </footer>
-    <script src="script.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+#nome {
+  width: 100%;
+  padding-bottom: 45vh;
+  background-color: transparent;
+}
+
+#nome h1 {
+  margin-bottom: 0;
+  font-size: 5vh;
+  padding-top: 20vh;
+  padding-right: 40vh;
+  text-align: right;
+  font-family: "Source Code Pro", monospace;
+  color: rgb(255, 102, 0);
+  font-weight: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#nome h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  padding-right: 49vh;
+  text-align: right;
+  font-family: "Source Code Pro", monospace;
+  font-weight: normal;
+  font-size: 3vh;
+}
+
+#nome p {
+  margin-top: 0;
+  text-align: right;
+  font-family: "Cormorant", serif;
+  font-weight: normal;
+  color: rgb(255, 102, 0);
+  padding-right: 36vh;
+  font-size: 2vh;
+}
+
+#Sobremim {
+  width: 100%;
+}
+
+.titulo {
+  padding-top: 10vh;
+  padding-left: 10vh;
+  font-size: 4vh;
+  margin-top: 0;
+  font-weight: normal;
+  color: rgb(255, 102, 0);
+  font-family: "Fira Code", monospace;
+}
+
+#detalhes {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#detalhes img {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  margin: 3vh 0 0 20vh;
+  border: solid 5px rgb(255, 102, 0);
+}
+
+.Meunome {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.Meunome h3 {
+  font-family: "Fira Code", monospace;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+#detalhes ul {
+  list-style: none;
+  padding: 0;
+}
+
+#detalhes li {
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: "Fira Code", monospace;
+}
+
+.laranja {
+  color: rgb(255, 102, 0);
+}
+
+#habilidades h2 {
+  font-family: "Fira Code", monospace;
+  font-size: 1rem;
+  font-weight: normal;
+
+  margin-left: 15vh;
+}
+
+#flex {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+body.dark .barrabranca {
+  background-color: white;
+}
+body.white .barrabranca {
+  background-color: black;
+}
+.barrabranca {
+  height: 2vh;
+  width: 25vw;
+  margin-top: 2vh;
+}
+
+.lista {
+  width: 50%;
+  margin-left: 15vh;
+}
+
+.estilo {
+  display: flex;
+  width: 20vw;
+  justify-content: space-between;
+  margin-top: 5vh;
+}
+
+.divsvg {
+  display: flex;
+}
+
+.divsvg img {
+  padding-left: 1vh;
+}
+
+.estilo span {
+  font-family: "Fira Code", monospace;
+}
+
+.tipos {
+  font-size: 3em;
+}
+
+.porcentagem {
+  font-size: 1em;
+}
+
+/* porcentagens*/
+
+#barralaranjaHTML {
+  background-color: rgb(255, 102, 0);
+  height: 100%;
+  max-width: 90%;
+}
+
+#barralaranjaJS {
+  background-color: rgb(255, 102, 0);
+  height: 100%;
+  max-width: 80%;
+}
+
+#barralaranjaPython {
+  background-color: rgb(255, 102, 0);
+  height: 100%;
+  max-width: 0%;
+}
+
+#barralaranjaSQL {
+  background-color: rgb(255, 102, 0);
+  height: 100%;
+  max-width: 40%;
+}
+
+#barralaranjaCsharp {
+  background-color: rgb(255, 102, 0);
+  height: 100%;
+  max-width: 30%;
+}
+
+#barralaranjaUH {
+  background-color: rgb(255, 102, 0);
+  height: 100%;
+  max-width: 40%;
+}
+#barralaranjaPHP {
+  background-color: rgb(255, 102, 0);
+  height: 100%;
+  max-width: 50%;
+}
+#barralaranjaSwift {
+  background-color: rgb(255, 102, 0);
+  height: 100%;
+  max-width: 10%;
+}
+#barralaranjaR {
+  background-color: rgb(255, 102, 0);
+  height: 100%;
+  max-width: 10%;
+}
+#barralaranjaKotlin {
+  background-color: rgb(255, 102, 0);
+  height: 100%;
+  max-width: 10%;
+}
+/* fim porcentagem */
+
+#educacao {
+  width: 100%;
+}
+
+.listas2 {
+  width: 50%;
+  border-left: 2px solid rgb(255, 102, 0);
+  padding-left: 2vh;
+}
+
+.ahistoria {
+  width: 100%;
+  display: flex;
+  padding-top: 10vh;
+}
+
+#esquerda {
+  margin-left: 17vh;
+}
+
+.historia {
+  margin-bottom: 8vh;
+}
+
+.historia p {
+  font-size: 1em;
+  font-family: "Fira Code", monospace;
+  padding-left: 3vh;
+}
+
+.historia h2 {
+  font-family: "Fira Code", monospace;
+  font-size: 1.4em;
+  margin-top: 0;
+  padding-top: 0;
+  color: rgb(255, 102, 0);
+}
+
+.historia h2 svg {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+}
+
+.Bola {
+  width: 3vh;
+  height: 3vh;
+  background: black;
+  border: 2px solid rgb(255, 102, 0);
+  border-radius: 50%;
+  position: absolute;
+  transform: translateX(-3.6vh) translateY(1vh);
+  box-sizing: border-box;
+}
+
+#backback {
+  height: 70vh;
+}
+#back {
+  max-width: 80vh;
+  max-height: 50vh;
+  overflow: hidden;
+}
+#back > div > div > div > a > img {
+  max-width: 80vh;
+  max-height: 50vh;
+  min-height: 50vh;
+  min-width: 80vh;
+}
+.carousel-caption h5 {
+  -webkit-text-stroke-width: 0.5px; /* Largura da borda */
+  -webkit-text-stroke-color: #000;
+  color: white;
+}
+.carousel-caption p {
+  color: white;
+  -webkit-text-stroke-width: 0.25px; /* Largura da borda */
+  -webkit-text-stroke-color: #000;
+}
+
+footer {
+  width: 100%;
+  height: 20vh;
+  background-color: rgb(255, 102, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer h2 {
+  color: white;
+  font-family: "Fira Code", monospace;
+  font-weight: normal;
+}
+
+::-webkit-scrollbar {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 102, 0);
+  border-radius: 10px;
+}
+#ga {
+  background-color: transparent;
+  color: rgb(255, 102, 0);
+}
+#ge {
+  background-color: transparent;
+  color: rgb(255, 102, 0);
+}
+#go {
+  background-color: transparent;
+  color: rgb(255, 102, 0);
+}
+#sei {
+  background-color: transparent;
+}
+#ad {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#contato {
+  padding-bottom: 10vh;
+  font-family: "Fira Code", monospace;
+}
+
+#contato div ul {
+  list-style: none;
+  padding-left: 40vh;
+  padding-top: 10%;
+}
+
+.abcd ul li {
+  display: flex;
+}
+
+.abcd ul li:not(:last-child) {
+  padding-bottom: 2vh;
+}
+
+#duasdivs {
+  width: 100%;
+  display: flex;
+}
+
+.abcd a {
+  line-height: 50px;
+  padding-left: 2vh;
+}
+
+.abcd {
+  width: 50%;
+}
+body.dark #redessociais svg {
+  fill: white;
+}
+body.white #redessociais svg {
+  fill: black;
+}
+#redessociais svg {
+  height: 50px;
+  width: 50px;
+}
+
+#mano {
+  width: 50%;
+}
+body.dark #mano form input {
+  background-color: black;
+  color: white;
+}
+
+#mano form input {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: rgb(255, 102, 0) solid 2px;
+  font-family: "Fira Code", monospace;
+  color: black;
+  font-size: 1em;
+  height: 2em;
+}
+
+#nomecompleto {
+  display: flex;
+}
+
+#email {
+  width: 100%;
+}
+#Messagem:focus {
+  outline: 0;
+}
+body.dark #Messagem {
+  background-color: black;
+  color: white;
+}
+body.darl #Messagem {
+  color: black;
+}
+#Messagem {
+  border: rgb(255, 102, 0) 2px solid;
+  border-radius: 10px;
+  font-size: 1rem;
+  max-width: 100%;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#mano form {
+  width: 50%;
+}
+
+#email input {
+  width: 100%;
+}
+
+#nomecompleto div {
+  width: 100%;
+}
+
+#nomecompleto div input {
+  width: 100%;
+}
+
+form input:focus {
+  outline: 0;
+}
+
+li:hover svg path {
+  fill: rgb(255, 102, 0);
+  transition: 1s;
+}
+
+li:hover a {
+  color: rgb(255, 102, 0);
+  transition: 1s;
+}
+
+#mano div p::after {
+  height: 2px;
+  background: rgb(255, 102, 0);
+  content: " ";
+  transition: 0.5s;
+  width: 10%;
+  position: absolute;
+  display: block;
+  transition: 0.5s;
+}
+
+#mano div p {
+  font-size: 1.45em;
+  color: rgb(255, 102, 0);
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 1.2vh 3vh;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slidem {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slidem:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slidem {
+  background-color: #2196f3;
+}
+
+input:focus + .slidem {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slidem:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slidem.round {
+  border-radius: 34px;
+}
+
+.slidem.round:before {
+  border-radius: 50%;
+}
+
+#divbutton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#divbutton button {
+  width: 7vh;
+  background-color: rgb(255, 102, 0);
+  border-radius: 10px;
+  height: 4vh;
+  border: 0px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#divbutton button:hover {
+  color: black;
+  transition: 1s;
+}
+
+#divhdbutton {
+  background-color: transparent;
+  top: 2vh;
+  position: fixed;
+  right: 2vh;
+  width: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+#hiddenbutton {
+  background-color: transparent;
+}
+
+#hiddenbutton path {
+  fill: transparent;
+}
+
+@media only screen and (max-width: 800px) {
+  #cima {
+    display: block;
+  }
+
+  .alista:hover a {
+    color: black;
+  }
+  .alista a {
+    width: 100%;
+    height: 100%;
+  }
+  #divcima {
+    display: none;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 102, 0);
+  }
+  #cima li {
+    padding: 5vh 0;
+  }
+  #detalhes {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 80%;
+    padding: 0 0 0 5vh;
+  }
+  #detalhes div {
+    max-width: 350px;
+  }
+  #detalhes img {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    border: solid 5px rgb(255, 102, 0);
+    max-width: 350px;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .Meunome {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    max-width: 350px;
+  }
+  #detalhes ul {
+    max-width: 350px;
+  }
+  #habilidades {
+    top: 0;
+  }
+  .titulo {
+    padding-left: 0vh;
+    width: 100%;
+    text-align: center;
+  }
+  #flex {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 80%;
+    padding-right: 0;
+    padding: 0 0 0 5vh;
+  }
+  .barrabranca {
+    width: 200px;
+  }
+  #esquerda {
+    margin-left: 0;
+  }
+  .listas2 {
+    width: 80%;
+  }
+  .lista {
+    margin-left: 0;
+    width: 310px;
+  }
+  #habilidades h2 {
+    margin-left: 0;
+    padding-left: 5vh;
+  }
+  .ahistoria {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 80%;
+    padding: 0 0 0 5vh;
+  }
+  #duasdivs {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 80%;
+    padding: 0 0 0 5vh;
+  }
+  #mano {
+    width: 70%;
+  }
+  form {
+    width: 80%;
+  }
+  #mano form {
+    width: 100%;
+  }
+  #contato div ul {
+    padding: 0;
+  }
+  #nome h1 {
+    padding-right: 0;
+    text-align: left;
+    padding-left: 5vh;
+  }
+  #nome h2 {
+    padding-right: 0;
+    text-align: left;
+    padding-left: 5vh;
+  }
+  #nome p {
+    padding-right: 0;
+    text-align: left;
+    padding-left: 5vh;
+  }
+  .navigation-auto {
+    position: absolute;
+    width: 55%;
+    margin-top: 24vh;
+    display: flex;
+    justify-content: center;
+  }
+  .abcd {
+    width: 100%;
+  }
+  #hiddenbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    background-color: rgb(255, 102, 0);
+    border-radius: 30px;
+    padding: 1vh;
+  }
+  #hiddenbutton path {
+    display: block;
+    fill: black;
+    width: 2em;
+    height: 2em;
+  }
+}
