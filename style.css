@@ -564,21 +564,22 @@ li:hover a {
   color: rgb(255, 102, 0);
 }
 /* The switch - the box around the slider */
-.switch {
+#sun {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
   margin: 1.2vh 3vh;
+  background: black;
+  outline: none;
+  border: 0;
+  font-size: 1rem;
 }
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+#sun img {
+  width: 2vh;
+  height: 2vh;
+  fill: white;
 }
-
 /* The slider */
 .slidem {
   position: absolute;
